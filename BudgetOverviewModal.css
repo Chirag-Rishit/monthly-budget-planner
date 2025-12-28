@@ -1,0 +1,155 @@
+/* Budget Overview Modal Specific Styles */
+.overview-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.overview-stat {
+  text-align: center;
+  padding: 16px;
+  background: var(--gray-50);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.overview-label {
+  font-size: 12px;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.overview-value {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.overview-value.income { 
+  color: var(--secondary-green); 
+}
+
+.overview-value.expense { 
+  color: var(--error-red); 
+}
+
+.overview-value.savings { 
+  color: var(--primary-blue); 
+}
+
+/* Expense Breakdown Styles */
+.expense-breakdown {
+  margin-bottom: 32px;
+}
+
+.expense-breakdown h3 {
+  color: var(--gray-800);
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.breakdown-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.breakdown-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.breakdown-category {
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.breakdown-amount {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breakdown-amount .amount {
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.breakdown-amount .percentage {
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+/* Budget Insights Styles */
+.budget-insights h3 {
+  color: var(--gray-800);
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.insight-item {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: var(--gray-50);
+  border-radius: 8px;
+}
+
+.insight-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.insight-content strong {
+  color: var(--gray-800);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.insight-content p {
+  color: var(--gray-600);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .overview-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .breakdown-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .breakdown-amount {
+    align-self: flex-end;
+  }
+}

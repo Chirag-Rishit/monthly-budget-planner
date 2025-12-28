@@ -1,0 +1,200 @@
+.customer-dashboard-container {
+  min-height: 100vh;
+  background-color: var(--gray-50);
+}
+
+.customer-dashboard-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+  color: var(--white);
+  padding: 32px 0;
+  box-shadow: var(--shadow);
+}
+
+.customer-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customer-header-content h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.customer-header-content p {
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+.customer-dashboard-main {
+  padding: 32px 0;
+}
+
+.customer-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.customer-quick-actions h2 {
+  margin-bottom: 20px;
+  color: var(--gray-800);
+  font-size: 20px;
+}
+
+.customer-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.customer-action-buttons .btn {
+  justify-content: flex-start;
+  padding: 16px 20px;
+  font-size: 15px;
+}
+
+.customer-savings-progress h2 {
+  margin-bottom: 20px;
+  color: var(--gray-800);
+  font-size: 20px;
+}
+
+.customer-progress-info {
+  margin-bottom: 16px;
+}
+
+.customer-progress-bar {
+  height: 12px;
+  background-color: var(--gray-200);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.customer-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary-green), var(--secondary-green-light));
+  border-radius: 6px;
+  transition: width 0.6s ease;
+}
+
+.customer-progress-text {
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray-600);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.customer-recent-transactions h2 {
+  margin-bottom: 20px;
+  color: var(--gray-800);
+  font-size: 20px;
+}
+
+.customer-transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.customer-transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.customer-transaction-item:last-child {
+  border-bottom: none;
+}
+
+.customer-transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.customer-transaction-name {
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.customer-transaction-date {
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+.customer-transaction-amount {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.customer-transaction-amount.income {
+  color: var(--secondary-green);
+}
+
+.customer-transaction-amount.expense {
+  color: var(--error-red);
+}
+
+.customer-no-transactions {
+  text-align: center;
+  color: var(--gray-500);
+  font-style: italic;
+  padding: 20px;
+}
+
+.customer-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.customer-stat-card {
+  background: var(--white);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  border: 1px solid var(--gray-200);
+}
+
+.customer-stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.customer-stat-label {
+  color: var(--gray-600);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .customer-header-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .customer-dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .customer-action-buttons {
+    gap: 8px;
+  }
+  
+  .customer-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
