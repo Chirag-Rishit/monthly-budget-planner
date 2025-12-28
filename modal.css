@@ -1,0 +1,146 @@
+/* Modal Base Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.95);
+  animation: scaleIn 0.3s ease forwards;
+}
+
+.modal-header {
+  padding: 24px 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--gray-400);
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--gray-600);
+  background-color: var(--gray-100);
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.modal-footer {
+  padding: 0 24px 24px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Form Styles within Modals */
+.modal-body .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.modal-body .input-group label {
+  font-weight: 500;
+  color: var(--gray-700);
+  font-size: 14px;
+}
+
+.modal-body .input-group input,
+.modal-body .input-group select,
+.modal-body .input-group textarea {
+  padding: 12px 16px;
+  border: 2px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background-color: var(--white);
+}
+
+.modal-body .input-group input:focus,
+.modal-body .input-group select:focus,
+.modal-body .input-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1);
+}
+
+.modal-body .error-message {
+  background-color: #fef2f2;
+  color: var(--error-red);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--error-red);
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  to { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 20px;
+    max-width: calc(100% - 40px);
+  }
+  
+  .modal-header {
+    padding: 20px 20px 0;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-footer {
+    padding: 0 20px 20px;
+    flex-direction: column;
+  }
+  
+  .modal-footer .btn {
+    width: 100%;
+  }
+}
