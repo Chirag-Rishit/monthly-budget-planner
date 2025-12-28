@@ -1,0 +1,274 @@
+/* Employee Report Modal Specific Styles */
+.manager-employee-summary {
+  margin-bottom: 32px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.manager-summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.manager-summary-stat {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.manager-stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.manager-stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.manager-stat-value.income { 
+  color: var(--secondary-green); 
+}
+
+.manager-stat-value.status-good { 
+  color: var(--secondary-green); 
+}
+
+.manager-stat-value.status-warning { 
+  color: var(--warning-yellow); 
+}
+
+.manager-stat-value.status-danger { 
+  color: var(--error-red); 
+}
+
+/* Report Section Styles */
+.manager-report-section {
+  margin-bottom: 32px;
+}
+
+.manager-report-section h3 {
+  color: var(--white);
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Trend Chart Styles */
+.manager-trend-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 120px;
+  margin-bottom: 16px;
+  padding: 0 10px;
+}
+
+.manager-trend-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.manager-trend-month {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.manager-trend-bars {
+  display: flex;
+  gap: 2px;
+  align-items: end;
+  height: 80px;
+}
+
+.manager-trend-bar {
+  width: 8px;
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+}
+
+.manager-trend-bar.income { 
+  background: var(--secondary-green); 
+}
+
+.manager-trend-bar.expense { 
+  background: var(--error-red); 
+}
+
+.manager-trend-bar.savings { 
+  background: var(--primary-blue); 
+}
+
+.manager-trend-value {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+/* Budget Breakdown Styles */
+.manager-budget-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.manager-budget-category {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.manager-category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.manager-category-name {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 14px;
+}
+
+.manager-category-amount {
+  font-weight: 700;
+  color: var(--white);
+  font-size: 16px;
+}
+
+.manager-category-progress {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.manager-category-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-blue), var(--secondary-green));
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Recommendations Styles */
+.manager-recommendations {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.manager-recommendations h3 {
+  color: var(--white);
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.manager-recommendation-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.manager-recommendation-item:last-child {
+  border-bottom: none;
+}
+
+.manager-recommendation-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.manager-recommendation-content {
+  flex: 1;
+}
+
+.manager-recommendation-title {
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.manager-recommendation-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Action Items Styles */
+.manager-action-items {
+  margin-top: 24px;
+}
+
+.manager-action-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.manager-action-item:last-child {
+  border-bottom: none;
+}
+
+.manager-action-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-blue);
+}
+
+.manager-action-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.manager-action-text.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .manager-summary-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .manager-budget-breakdown {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .manager-trend-chart {
+    height: 100px;
+  }
+  
+  .manager-trend-bars {
+    height: 60px;
+  }
+}
